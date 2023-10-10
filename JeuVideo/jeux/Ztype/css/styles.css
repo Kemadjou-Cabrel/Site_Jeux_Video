@@ -1,0 +1,30 @@
+body
+{
+    background-color: black;
+}
+
+h2
+{
+    font-size: 60px;
+    text-align: center;
+    color: orange;
+    font-weight: bold;
+}
+
+#game-container
+{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+a
+{
+    font-size: 30px;
+    text-align: center;
+    color: orange;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 10px;
+}

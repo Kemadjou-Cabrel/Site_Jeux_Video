@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background-color: #18f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+section {
+	background-color: #fff;
+	padding: 70px;
+	border-radius: 6px;
+	box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+
+.jeu {
+	width: 500px;
+	height: 200px;
+	border: 1px solid #000;
+  	overflow: visible; /* Modifier la valeur pour afficher les éléments qui dépassent */
+  	border-bottom: 1px solid #18f;
+	position: relative;
+}
+
+.perso {
+	width: 20px;
+	height: 50px;
+	position: relative;
+	top: 150px;
+	
+	
+}
+
+/*Animation personnage saute*/
+@keyframes perso-saut {
+
+	0%{
+		top: 130px;
+	}
+
+	25%{
+		top: 80px;
+	}
+
+	50%{
+		top: 80px;
+	}
+
+	100%{
+		top: 130px;
+	}
+}
+
+.animation {
+	animation: perso-saut 500ms infinite;
+}
+
+
+
+.perso img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.perso.left {
+  transform: scaleX(-1);
+}
+
+.obstacles {
+	width: 20px;
+	height: 20px;
+	background-color: #333;
+	position: relative;
+	top: 130px;
+	left: 480px;
+	border-radius: 50%;
+	animation: obst-anim 2s infinite;
+}
+
+.bonus {
+	width: 40px;
+  	height: 40px;
+  	background-color: red;
+  	position: relative;
+  	top: 90px;
+  	left: calc(100% - 40px);
+  	border-radius: 50%;
+  	/*animation: obst-anim 1.5s infinite;*/
+}
+
+.invisible {
+  display: none;
+}
+
+/*Animation obstacles*/
+@keyframes obst-anim {
+
+	0%{
+		left: 480px;
+	}
+
+	100%{
+		left: -40px;
+	}
+
+}
+
+
+.score {
+	margin-top: 20px;
+	text-align: center;
+	border: 1px solid #000;
+  	padding: 5px;
+  	font-size: 20px;
+  	color: #000;
+  	background-color: #fff;
+  	text-decoration: 0;
+  	font-weight: bold;
+  	position: fixed;
+  	top: 10px;
+  	right: 10px;
+  	transform: translateX(-50%);
+
+  	
+}
+
+.control {
+	margin-top: 20px;
+	text-align: center;
+}
+
+a, button {
+	padding: 10px 50px;
+	border-radius: 4px;
+	border: 0;
+	box-shadow: 0 0 50px rgba(0,0,0,0.1);
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #fff;
+	font-size: 15px;
+	text-decoration: 0;
+	color: #000;
+}

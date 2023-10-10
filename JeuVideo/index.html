@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>JeuxVideos.com</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <div class="wrapper">
+         <!-- end loader -->
+         <div class="sidebar">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div id="dismiss">
+                  <i class="fa fa-arrow-left"></i>
+               </div>
+               <ul class="list-unstyled components">
+                  <li class="active">
+                     <a href="index.html">Acceuil</a>
+                  </li>
+                  <li id="classement">
+                     <a href="classement.html">Classements</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <div id="content">
+            <!-- header -->
+            <header>
+               <!-- header inner -->
+               <div class="head_top">
+                  <div class="header">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-md-3 logo_section">
+                              <div class="full">
+                                 
+                              </div>
+                           </div>
+                           <div class="col-md-9">
+                              <div class="right_header_info">
+                                 <ul>
+                                    <li id="username">
+                                          
+                                    </li>
+                                    <button id="logout">
+                                       <li class="menu_iconb">
+                                          Logout
+                                       </li>
+                                    </button>
+                                    <li class="menu_iconb" id="signin">
+                                       <a href="./connexion.html">Sign in</a>
+                                    </li>
+                                    <li class="menu_iconb" id="signup">
+                                       <a href="./inscription.html">Sign up</a>
+                                    </li>
+                                    <li>
+                                       <button type="button" id="sidebarCollapse">
+                                       <img src="images/menu_icon.png" alt="#" />
+                                       </button>
+                                    </li>
+                                    <script>
+                                       // affichage de certains éléments si connecté ou non
+                                       let username = sessionStorage.getItem('username');
+                                       let signin = document.getElementById("signin");
+                                       let signup = document.getElementById("signup");
+                                       let logout = document.getElementById("logout");
+                                       let classement = document.getElementById("classement");
+                                       if(username != null)
+                                       {
+                                          username = document.getElementById("username");
+                                          username.innerHTML = sessionStorage.getItem('username');
+   
+                                          logout.addEventListener("click",function(){
+                                             let result = confirm("Voulez-vous vraiment vous déconnecter ?");
+                                             if(result)
+                                             {
+                                                sessionStorage.removeItem('username');
+                                                window.location.replace("index.html");
+                                             }
+                                          });
+                                          logout.style.display = "relative";
+                                          classement.style.display = "relative";
+                                          signin.style.display = "none";
+                                          signup.style.display = "none";
+                                       }
+                                       else
+                                       {
+                                          logout.style.display = "none";
+                                          classement.style.display = "none";
+                                          signin.style.display = "relative";
+                                          signup.style.display = "relative";
+                                       }
+                                    </script>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+         </div>
+            <!-- end header inner -->
+            <!-- end header -->
+         <!-- Categories -->
+         <!-- casino -->
+         <div id="game" class="casino">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>Jeux Videos.com</h2>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  
+                  <div class="col-md-4 padding_bottom" id="1">
+                     <div class="game_box">
+                        <figure><img  src="images/bbtan.jpg" alt="Image not found"/></figure>
+                     </div>
+                     
+                     <div class="game" >
+                        <h3><button id="b1">B-BTAN</button></h3>
+                     </div>
+                     
+                     <div class="game_box_hide" id="d1">
+                        
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4 padding_bottom" id="2">
+                     <div class="game_box">
+                        <figure><img src="images/SpaceInvaders.PNG" alt="Image not found"/></figure>
+                     </div>
+                     <div class="game" >
+                        <h3><button id="b2">Space Invaders</button></h3>
+                     </div>
+                     <div class="game_box_hide" id="d2">
+                        
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4 padding_bottom" id="3">
+                     <div class="game_box">
+                        <figure><img src="images/Zelda.PNG" alt="Image not found"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3><button id="b3">Zelda</button></h3>
+                     </div>
+                     <div class="game_box_hide"  id="d3">
+                        
+                     </div>
+                  </div>
+
+                  <div class="col-md-4 margin_bottom1" id="4">
+                     <div class="game_box" >
+                        <figure><img src="images/ZtypeImage.png" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3><button id="b4">Ztype</button></h3>
+                     </div>
+                     <div class="game_box_hide"  id="d4">
+                        
+                     </div>
+                  </div>
+
+                  <div class="col-md-4 margin_bottom1" id="5">
+                     <div class="game_box" >
+                        <figure><img src="images/runner.PNG" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3><button id="b5">Runner</button></h3>
+                     </div>
+                     <div class="game_box_hide"  id="d5">
+                        
+                     </div>
+                  </div>
+
+                  <div class="col-md-4"  id="6">
+                     <div class="game_box">
+                        <figure><img src="images/sokoban.PNG" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3><button id="b6">Sokoban</button></h3>
+                     </div>
+                     <div class="game_box_hide"  id="d6">
+                        
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+         <script>
+            // execution différentes des buttons si connecté ou pas
+            username = sessionStorage.getItem('username');
+            // variable id
+            let button1 = document.getElementById("b1");
+            let button2 = document.getElementById("b2");
+            let button3 = document.getElementById("b3");
+            let button4 = document.getElementById("b4");
+            let button5 = document.getElementById("b5");
+            let button6 = document.getElementById("b6");
+            if(username == null)
+            {
+   
+               // ajout des eventlistener
+               
+               button1.addEventListener("click",function(){connexion()});
+               button2.addEventListener("click",function(){connexion()});
+               button3.addEventListener("click",function(){connexion()});
+               button4.addEventListener("click",function(){connexion()});
+               button5.addEventListener("click",function(){connexion()});
+               button6.addEventListener("click",function(){connexion()});
+   
+               function connexion()
+               {
+                  alert("Veuillez vous connecter");
+                  window.location.replace("connexion.html");
+               }
+            }
+            else
+            {
+               // ajout des eventlistener
+               
+               button1.addEventListener("click",function(){jouer(1)});
+               button2.addEventListener("click",function(){jouer(2)});
+               button3.addEventListener("click",function(){jouer(3)});
+               button4.addEventListener("click",function(){jouer(4)});
+               button5.addEventListener("click",function(){jouer(5)});
+               button6.addEventListener("click",function(){jouer(6)});
+   
+               function jouer(id)
+               {
+                  switch(id)
+                  {
+                     case 1:
+                        window.location.replace("./BBTAN.html");
+                        break;
+                     case 2:
+                        window.location.replace("./SpaceInvaders.html");
+                        break;
+                     case 3:
+                        window.location.replace("./Zelda.html");
+                        break;
+                     case 4:
+                        window.location.replace("./Ztype.html");
+                        break;
+                     case 5:
+                        window.location.replace("./Runner.html");
+                        break;
+                     case 6:
+                        window.location.replace("./Sokoban.html");
+                        break;
+                     default : alert("Erreur : lien vers le jeu introuvable");
+                  }
+               }
+            }
+
+         </script>
+         <script src="./Controleur/c_index.js"></script>
+         <!-- end casino -->
+         <!--  footer -->
+         <footer>
+            <div class="footer">
+               <div class="copyright">
+                  <div class="container">
+                     <p>Made by Adrien, Nathan, Ahmed, Kenan, Ceila and Cabrel</p>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- end footer -->
+      </div>
+      <div class="overlay"></div>
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/jquery-3.6.4.js"></script>
+      
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+             $("#sidebar").mCustomScrollbar({
+                 theme: "minimal"
+             });
+         
+             $('#dismiss, .overlay').on('click', function() {
+                 $('#sidebar').removeClass('active');
+                 $('.overlay').removeClass('active');
+             });
+         
+             $('#sidebarCollapse').on('click', function() {
+                 $('#sidebar').addClass('active');
+                 $('.overlay').addClass('active');
+                 $('.collapse.in').toggleClass('in');
+                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             });
+         });
+      </script>
+      
+   </body>
+</html>
+

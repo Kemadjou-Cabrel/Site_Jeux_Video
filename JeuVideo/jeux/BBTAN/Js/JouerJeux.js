@@ -1,0 +1,9 @@
+CreerTabJeu();
+BlocMAJ();
+dessinerBloc();
+dessinerLigneRouge();
+dessinerBall(x,y);
+addEventListenerTire();
+PseudoUser();
+Score();
+NbrBalle();

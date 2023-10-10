@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: black;
+    width: 100%;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /*font-size: 4vh;*/
+    font-size: 4vmin;
+}
+
+#gameBoard{
+    width: 22%;
+    height: 72vh;
+    position: absolute;
+    top: 5%;
+    transform: translate(-50%, 20%);
+    border: 3px yellow solid;
+}
+#nom
+{
+    color: rgb(117, 20, 207);
+    font-style: italic;
+}
+#score
+{
+    width: 15vmin;
+    height: 12vh;
+    position: absolute;
+    top: 5%;
+    transform: translate(150%, 115%);
+    border: 3px aqua solid;
+    color: aqua;
+    
+}
+#nbrBalle
+{
+    width: 5.625vmin;
+    height: 5vh;
+    position: absolute;
+    top: 80%;
+    transform: translate(370%, 100%);
+    border: 3px rgb(117, 20, 207) solid;
+    color: white;
+}
+
+#connected{
+    width: 38vmin;
+    height: 10vh;
+    position: absolute;
+    top: 10%;
+    transform: translate(-160%, -50%);
+    color: #fa1eeb;
+    border: 3px #fa1eeb solid;
+}
+
+#accueil
+{
+    width: 15vmin;
+    height: 5vh;
+    position: absolute;
+    top: 5%;
+    transform: translate(150%, 0%);
+    border: 3px orange solid;
+    color: orange;
+    
+}
+
+#rejouer
+{
+    width: 15vmin;
+    height: 5vh;
+    position: absolute;
+    top: 5%;
+    transform: translate(150%, 130%);
+    border: 3px orange solid;
+    color: orange;
+}
+
+

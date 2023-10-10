@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--pour sauvegarder highscore-->
+     <script src="./Controleur/c_HighScore.js"></script>
+
+    <link rel="stylesheet" href="./jeux/BBTAN/css/style.css">
+    <title>BBTAN</title>
+</head>
+<body>
+    <!--nous permet d'avoir le id du jeu-->
+    <input type="hidden" id="gameID" value="1">
+
+    <span style="color: rgb(42, 224, 42); margin: auto; display: none;" id="newHighScore" ></span><br>
+
+    <a href="index.html">
+        <span id="accueil">Accueil</span>
+    </a>
+
+    <a href="BBTAN.html">
+        <span id="rejouer">Rejouer</span>
+    </a>
+
+    <span id="nom"><h1>B-BTAN</h1></span>
+    
+    <span id ="score"></span>
+    <span id ="nbrBalle"></span>
+    <span id ="connected"></span>
+    <span id ="highscore"></span>
+    <canvas id="gameBoard"></canvas>
+
+    <script src="Controleur/c_loginVeri.js"></script>
+    <script src="./jeux/BBTAN/Js/CreerJeu.js"></script>
+    <script src="./jeux/BBTAN/Js/LogiqueJeux.js"></script>
+    <script src="./jeux/BBTAN/Js/JouerJeux.js"></script>
+    <script src="js/jquery-3.6.4.js"></script> <!--pour les requetes AJAX-->
+    
+</body>
+</html>

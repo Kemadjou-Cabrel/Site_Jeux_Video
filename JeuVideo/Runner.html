@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JEU</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous" defer></script>
+
+    <link rel="stylesheet"  href="./jeux/Runner/style.css">
+
+    <script src="./Controleur/c_HighScore.js"></script>
+  </head>
+  <body>
+        <!--nous permet d'avoir le id du jeu-->
+        <input type="hidden" id="gameID" value="5">
+
+        <section>
+          <div class="jeu">
+            <div class="perso">
+              <img src="./jeux/Runner/img.png" alt="">
+            </div>
+            <div class="obstacles"></div>
+            <div class="bonus"></div>
+          </div>
+        </section>
+        <div class="control">
+            <button onclick="sauter()">SAUTER</button>
+            <a href="Runner.html"> COMMENCER</a>
+            <a href="index.html">ACCUEIL</a>
+        </div>
+      <div class="score">Score: <span id="score">0</span></div>
+
+      <h2 style="margin: auto;">
+        <span style="color: rgb(0, 0, 0); display: none;" id="newHighScore" ></span>
+      </h2>
+
+      <script src="./jeux/Runner/script.js"></script>
+
+
+  </body>
+</html>
